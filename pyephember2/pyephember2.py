@@ -411,7 +411,7 @@ def zone_pointdata_value(zone, pointIndex):
     index = GetPointIndex(zone, pointIndex)
 
     for datum in zone['pointDataList']:
-        if datum['pointIndex'] == index:
+        if int(datum['pointIndex']) == index:
             return int(datum['value'])
 
     return None
